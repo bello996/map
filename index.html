@@ -1,14 +1,120 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>去哪玩</title>
-    <script type="module" crossorigin src="/assets/index-D3ifBdth.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DxaPhmmT.css">
+    <title>Parallelogram with Vertical Left Side</title>
+    <style>
+      .parallelogram {
+        width: 100px;
+        height: 35px;
+        border-radius: 5px;
+        background-color: #f4fbf2;
+        border: 1px solid #83c772;
+        position: relative;
+        transform: skewX(-15deg);
+        border-right: none;
+        margin: 50px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: content-box;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+      }
+      .parallelogram::before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        right: -10px;
+        width: 15px;
+        height: 100%;
+        background-color: #f4fbf2;
+        border: 1px solid #83c772;
+        transform: skewX(15deg);
+        border-radius: 5px;
+        border-left: none;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        box-sizing: content-box;
+      }
+      .content {
+        width: 100%;
+        height: 100%;
+        transform: skewX(15deg);
+        position: relative;
+        left: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .left {
+        position: relative;
+        left: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 75px;
+        height: 30px;
+        background-color: #e5f2e1;
+        border-left: none;
+        border-radius: 0;
+        border-bottom-right-radius: 5px;
+
+        transform: skewX(-15deg);
+      }
+      .left::before {
+        position: absolute;
+        left: -5px;
+        width: 15px;
+        height: 100%;
+        background-color: #e5f2e1;
+        border-right: none;
+
+        /* border-top-left-radius: 5px; */
+
+        transform: skewX(15deg);
+        content: "";
+      }
+      .content1 {
+        width: 100%;
+        height: 100%;
+        transform: skewX(15deg);
+        position: relative;
+        left: -5px;
+        padding: 0 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .content1 .icon {
+        width: 10px;
+        height: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .content1 .text {
+        font-size: 12px;
+        color: #25ad00;
+      }
+    </style>
   </head>
   <body>
-    <div id="app"></div>
+    <div class="parallelogram">
+      <div class="content">111</div>
+    </div>
+
+    <div class="left">
+      <div class="content1">
+        <div class="icon">12</div>
+        <div class="text">已盯住</div>
+      </div>
+    </div>
   </body>
 </html>
